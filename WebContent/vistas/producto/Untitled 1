@@ -1,0 +1,181 @@
+    <div class="row">
+    	<div class="col-md-5">
+    		<div class="w3-card-4">
+    			<div class="w3-container">
+    				<br/>
+    				<p align="center"><label>Unidades</label></p>
+				<div class="form-group">
+	                <label>Relaciones - Unidades por caja</label>
+	                <input type="text" class="form-control input-sm text-right" name="unixcaja" data-fv-notempty="true" data-fv-integer="true" />
+	            </div>
+	            <div class="form-group">
+	                <label>Presentacion para la venta</label>
+	                <select name="presentacionUnidad" class="form-control input-sm" data-placeholder="Seleccione..." data-fv-notempty="true">
+					<option value="">[Seleccionar]</option>
+					#foreach($p in $presentaciones)
+					<option value="$p.nombre">$p.nombre</option>
+					#end
+					</select>
+	            </div>
+	            <div class="form-group">
+	                <label>Precio de costo</label>
+	                <input name="pcUnit" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+	            </div>
+	            <div class="form-group">
+<!--
+		                <label>Porcentaje Ganancia</label>
+		                <div class="input-group">
+		                	<input name="porcentajeUnidad" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+		                	<span class="input-group-addon"> % </span>
+						</div>
+-->					
+		            </div>
+		            <div class="form-group">
+		                <label>Precio p&uacute;blico</label>
+		                <input name="pvUnit" type="text" class="form-control input-sm text-right" data-fv-notempty="true"   data-fv-numeric="true">
+		            </div>
+		            <div class="form-group">
+		                <label>Inventario m&iacute;nimo</label>
+		                <input name="inventarioMinimoUnidad" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+		            </div>
+		            <div class="form-group">
+						<label>Compra por unidades</label>
+						<div>
+							<label class="container"> <input type="radio" name="tipoCompra" value="1" data-fv-notempty="true" class="w3-radio"> Si <b class="text-success">(Tickear si se vende por unidad)</b>
+							</label>
+						</div>
+					</div>
+	            <br/>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="col-md-5">
+    		<div class="w3-card-4">
+    			<div class="w3-container">
+    				<br/>
+    				<p align="center"><label>Cajas</label></p>
+					<div class="form-group">
+	                <label>Relaciones - Cajas por paquete</label>
+	                <input type="text" class="form-control input-sm text-right" name="unixpaquete"  data-fv-notempty="true" data-fv-integer="true" />
+	            	</div>
+	            	<div class="form-group">
+	                <label>Presentacion para la venta</label>
+	                <select name="presentacionCaja" class="form-control input-sm" data-placeholder="Seleccione..." data-fv-notempty="true">
+					<option value="">[Seleccionar]</option>
+					#foreach($p in $presentaciones)
+					<option value="$p.nombre">$p.nombre</option>
+					#end
+					</select>
+	            	</div>
+	            	<div class="form-group">
+		                <label>Precio de costo</label>
+		                <input name="pcCaja" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+					</div>
+					<!--
+		            <div class="row">
+		            	<div class="col-md-6">
+
+		            		<div class="form-group">
+			                <label>Descuento</label>
+			                <div class="input-group">
+			                	<input name="porcentajeDescuentoCaja" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+			                	<span class="input-group-addon"> % </span>
+			                </div>
+			            	</div>
+		            	</div>
+		            	<div class="col-md-6">
+		            		<div class="form-group">
+			                <label>Porcentaje</label>
+			                <div class="input-group">
+			                <input name="porcentajeCaja" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+			                <span class="input-group-addon"> % </span>
+			                </div>
+			            </div>
+						</div>
+						
+					</div>
+					-->
+
+		            <div class="form-group">
+		                <label>Precio p&uacute;blico</label>
+		                <input name="pvCaja" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+		            </div>
+		            <div class="form-group">
+		                <label>Inventario m&iacute;nimo</label>
+		                <input name="inventarioMinimoCaja" type="text" class="form-control input-sm text-right"  data-fv-notempty="true" data-fv-numeric="true">
+		            </div>
+		            <div class="form-group">
+						<label>Compra por caja</label>
+						<div>
+							<label class="container"> <input type="radio" name="tipoCompra" value="2" class="w3-radio"  data-fv-notempty="true"> Si<b class="text-success">(Tickear si se vende por caja)</b>
+							</label>
+						</div>
+					</div>
+	            	<br/>
+    			</div>
+        	</div>    		
+		</div>
+		<!--
+    	<div class="col-md-4">
+    		<div class="w3-card-4">
+    			<div class="w3-container">
+    				<br/>
+					<p align="center"><label>Paquete</label></p>
+					<div class="form-group">
+	                <label>Relaciones - Paquetes</label>
+	                <input type="text" class="form-control input-sm text-right" name="uniEnPaquete" value="1" data-fv-integer="true"  data-fv-notempty="true"/>
+	            	</div>
+	            	<div class="form-group">
+	                <label>Presentacion para la venta</label>
+	                <select name="presentacionPaquete" class="form-control input-sm" data-placeholder="Seleccione..." data-fv-notempty="true">
+					<option value="">[Seleccionar]</option>
+					#foreach($p in $presentaciones)
+					<option value="$p.nombre">$p.nombre</option>
+					#end
+					</select>
+	            	</div>
+	            	<div class="form-group">
+		                <label>Precio de costo</label>
+		                <input name="pcPaquete" type="text" class="form-control input-sm text-right" data-fv-numeric="true"  data-fv-notempty="true">
+		            </div>
+		            <div class="row">
+		            	<div class="col-md-6">
+		            		<div class="form-group">
+			                <label>Descuento</label>
+			                <div class="input-group">
+			                	<input name="porcentajeDescuentoPaquete" type="text" class="form-control input-sm text-right" data-fv-notempty="true" data-fv-numeric="true">
+			                	<span class="input-group-addon"> % </span>
+			                </div>
+			            	</div>
+		            	</div>
+		            	<div class="col-md-6">
+		            		<div class="form-group">
+			                <label>Porcentaje</label>
+			                <div class="input-group">
+			                	<input name="porcentajePaquete" type="text" class="form-control input-sm text-right" data-fv-numeric="true"  data-fv-notempty="true">
+			                	<span class="input-group-addon"> % </span>
+			                </div>
+			            </div>
+		            	</div>
+		            </div>
+		            <div class="form-group">
+		                <label>Precio p&uacute;blico</label>
+		                <input name="pvPaquete" type="text" class="form-control input-sm text-right" data-fv-numeric="true"  data-fv-notempty="true">
+		            </div>
+		            <div class="form-group">
+		                <label>Inventario m&iacute;nimo</label>
+		                <input name="inventarioMinimoPaquete" type="text" class="form-control input-sm text-right" data-fv-numeric="true"  data-fv-notempty="true">
+		            </div>
+		            <div class="form-group">
+						<label>Compra por paquete</label>
+						<div>
+							<label class="container"> <input type="radio" name="tipoCompra" value="3" class="w3-radio"  data-fv-notempty="true"> Si<b class="text-success">(Tickear si se vende por paquetes)</b>
+							</label>
+						</div>
+					</div>
+	            	<br/>
+    			</div>
+        </div>    		
+		</div>
+		-->
+    </div>
